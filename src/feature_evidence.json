@@ -1,0 +1,61 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-dedicated-login-page-ui-that-contains-a-bootstrap-styled-form-with-the-following-fields-email-type-email-and-password-type-password-plus-a-primary-log-in-submit-button",
+      "featureTitle": "Create a dedicated login page UI that contains a Bootstrap-styled form with the following fields: Email (type=email) and Password (type=password), plus a primary “Log in” submit button.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/pages/LoginPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-include-bootstrap-in-the-frontend-so-the-login-page-renders-with-bootstrap-styles-without-requiring-any-manual-css-setup-by-the-user",
+      "featureTitle": "Include Bootstrap in the frontend so the login page renders with Bootstrap styles without requiring any manual CSS setup by the user.",
+      "files": [
+        "frontend/index.html"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-consistent-visual-theme-for-the-login-page-spacing-typography-and-layout-that-complements-bootstrap-using-a-warm-neutral-palette-avoid-blue-purple-and-a-centered-card-layout",
+      "featureTitle": "Apply a consistent visual theme for the login page (spacing, typography, and layout) that complements Bootstrap, using a warm neutral palette (avoid blue/purple) and a centered card layout.",
+      "files": [
+        "frontend/src/index.css",
+        "frontend/src/pages/LoginPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

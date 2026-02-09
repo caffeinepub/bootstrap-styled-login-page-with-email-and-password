@@ -1,0 +1,15 @@
+{
+  "backend/main.mo": "Empty Motoko actor definition with no methods.",
+  "feature_evidence.json": "Feature evidence metadata mapping login-page-related features to corresponding frontend files and components.",
+  "frontend-file-summaries.txt": "Prewritten descriptions summarizing key frontend files and their purposes.",
+  "frontend/index.css": "Tailwind base plus warm neutral palette variables and Bootstrap override styles for the login page.",
+  "frontend/index.html": "HTML entry point that loads Bootstrap via CDN and mounts the React app.",
+  "frontend/src/App.tsx": "Renders the LoginPage component as the root view.",
+  "frontend/src/hooks/useActor.ts": "React hook that creates and manages a backend actor based on the user's Internet Identity.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides Internet Identity authentication context and logic using Dfinity AuthClient.",
+  "frontend/src/index.css": "Tailwind base styles plus warm neutral palette definitions and custom login-page visual overrides.",
+  "frontend/src/main.tsx": "Bootstraps the React app with QueryClient and InternetIdentityProvider.",
+  "frontend/src/pages/LoginPage.tsx": "Bootstrap-styled login form with email/password inputs, warm theme, and simulated submit handling.",
+  "frontend/tailwind.config.js": "Tailwind CSS config enabling dark mode, custom theme extensions, and plugins for typography, container queries, and animations.",
+  "project_state.json": "Project state describing requirements for a Bootstrap-based login page and listing existing features and pending requests."
+}

@@ -1,0 +1,63 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-09T14:03:07.356Z",
+  "summary": "REQ-1/2/3 appear implemented: a dedicated Bootstrap-styled login form page with email/password inputs and a submit button exists, Bootstrap CSS is loaded via CDN in the HTML entry point, and the page uses a centered card layout with a warm neutral theme. However, the diff introduces multiple unrequested/auth-related hook files (and a backend actor stub) and appears to violate the constraint about not editing certain existing hook/main files by adding new content under those restricted paths.",
+  "missing_requirements": [],
+  "hallucinated_features": [
+    {
+      "description": "Added/implemented Internet Identity hook/provider code even though the request is only for a Bootstrap-styled login UI and explicitly lists authentication logic as a non-goal.",
+      "reason": "BuildRequest asks only for a login page UI and Bootstrap styling; it does not request implementing or wiring Internet Identity provider/hook logic.",
+      "evidence": [
+        "frontend/src/hooks/useInternetIdentity.ts",
+        "frontend/src/main.tsx"
+      ]
+    },
+    {
+      "description": "Added useActor hook and React Query actor management logic (query invalidation/refetch) unrelated to the requested login page UI.",
+      "reason": "Not requested by any REQ; introduces extra authentication/actor infrastructure beyond UI requirements.",
+      "evidence": [
+        "frontend/src/hooks/useActor.ts"
+      ]
+    },
+    {
+      "description": "Login form simulates submission with a timeout and logs credentials attempt to console, including loading state/spinner text.",
+      "reason": "REQs only ask for UI fields and styling; simulated submit behavior and console logging are not requested (and border on authentication behavior).",
+      "evidence": [
+        "frontend/src/pages/LoginPage.tsx"
+      ]
+    },
+    {
+      "description": "Added backend actor stub file.",
+      "reason": "No backend changes are requested; authentication logic is explicitly a non-goal.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "description": "Potential constraint violation: changes/additions occur under paths explicitly listed as 'Do not edit' (useInternetIdentity.ts, useActor.ts, main.tsx).",
+      "reason": "BuildRequest constraints forbid editing these files/paths; diff shows new content added at these exact paths.",
+      "evidence": [
+        "frontend/src/hooks/useInternetIdentity.ts",
+        "frontend/src/hooks/useActor.ts",
+        "frontend/src/main.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.74,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/LoginPage.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

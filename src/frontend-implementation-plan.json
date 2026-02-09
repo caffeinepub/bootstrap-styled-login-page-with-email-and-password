@@ -1,0 +1,64 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Bootstrap-styled login page (email + password)",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Add a dedicated login page UI with a Bootstrap-styled form for email/password and a primary Log in submit button.",
+      "acceptanceCriteria": [
+        "Login page renders a form with an email input, password input, and a submit button",
+        "Inputs use appropriate HTML input types (email/password)",
+        "Form uses Bootstrap styling (Bootstrap layout/components/utilities)"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/LoginPage.tsx",
+          "operation": "create",
+          "description": "Create the LoginPage React view containing a Bootstrap-styled form with Email (type=email), Password (type=password), and a prominent primary action submit button labeled “Log in”, using Bootstrap form and spacing utilities."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the App component that renders the dedicated LoginPage as the app’s main view so it is reachable from the existing React entry point (without changing frontend/src/main.tsx)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Ensure Bootstrap is included so the login page renders with Bootstrap styling at runtime without manual user CSS setup.",
+      "acceptanceCriteria": [
+        "Bootstrap CSS is loaded in the app at runtime",
+        "Login page styling visibly reflects Bootstrap defaults (e.g., form controls/buttons spacing and appearance)"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Include Bootstrap CSS via a runtime-loaded mechanism (e.g., a CDN stylesheet link in the document head) so Bootstrap styles apply automatically to the LoginPage without any user setup."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Apply a warm neutral theme and centered card layout that complements Bootstrap and avoids blue/purple-dominant colors.",
+      "acceptanceCriteria": [
+        "Login form is centered on the page and presented in a card-like container",
+        "The page uses a warm neutral background and consistent spacing/typography",
+        "No blue/purple-dominant theme colors are used"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Create global styles to complement Bootstrap with a warm neutral background, consistent typography, and spacing defaults; ensure any custom accents avoid blue/purple-dominant colors."
+        },
+        {
+          "path": "frontend/src/pages/LoginPage.tsx",
+          "operation": "modify",
+          "description": "Adjust LoginPage layout to be centered (full-height) with a card-like container and warm neutral accents (e.g., neutral/dark/earthy button styling rather than default blue 'primary')."
+        }
+      ]
+    }
+  ]
+}

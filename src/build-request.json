@@ -1,0 +1,79 @@
+{
+  "kind": "build_request",
+  "title": "Bootstrap-styled login page with email and password",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a dedicated login page UI that contains a Bootstrap-styled form with the following fields: Email (type=email) and Password (type=password), plus a primary “Log in” submit button.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Create HTML login page using Bootstrap with email and password."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Login page renders a form with an email input, password input, and a submit button",
+        "Inputs use appropriate HTML input types (email/password)",
+        "Form uses Bootstrap styling (Bootstrap layout/components/utilities)"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Include Bootstrap in the frontend so the login page renders with Bootstrap styles without requiring any manual CSS setup by the user.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Create HTML login page using Bootstrap with email and password."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Bootstrap CSS is loaded in the app at runtime",
+        "Login page styling visibly reflects Bootstrap defaults (e.g., form controls/buttons spacing and appearance)"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Apply a consistent visual theme for the login page (spacing, typography, and layout) that complements Bootstrap, using a warm neutral palette (avoid blue/purple) and a centered card layout.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Login form is centered on the page and presented in a card-like container",
+        "The page uses a warm neutral background and consistent spacing/typography",
+        "No blue/purple-dominant theme colors are used"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not edit files under frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, or anything under frontend/src/components/ui (compose them instead if needed)."
+  ],
+  "nonGoals": [
+    "Implementing actual authentication logic (backend login, session management, token storage, etc.)",
+    "Adding third-party auth providers (only Internet Identity is supported on this platform)",
+    "Adding sign-up, forgot-password, or profile management flows"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

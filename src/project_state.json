@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Build a Bootstrap-based HTML login page with email and password fields.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-dedicated-login-page-ui-that-contains-a-bootstrap-styled-form-with-the-following-fields-email-type-email-and-password-type-password-plus-a-primary-log-in-submit-button",
+      "title": "Create a dedicated login page UI that contains a Bootstrap-styled form with the following fields: Email (type=email) and Password (type=password), plus a primary “Log in” submit button.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-include-bootstrap-in-the-frontend-so-the-login-page-renders-with-bootstrap-styles-without-requiring-any-manual-css-setup-by-the-user",
+      "title": "Include Bootstrap in the frontend so the login page renders with Bootstrap styles without requiring any manual CSS setup by the user.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-consistent-visual-theme-for-the-login-page-spacing-typography-and-layout-that-complements-bootstrap-using-a-warm-neutral-palette-avoid-blue-purple-and-a-centered-card-layout",
+      "title": "Apply a consistent visual theme for the login page (spacing, typography, and layout) that complements Bootstrap, using a warm neutral palette (avoid blue/purple) and a centered card layout.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create an HTML login page using Bootstrap with email and password inputs",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "projectName": "Bootstrap-styled login page with email and password",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
